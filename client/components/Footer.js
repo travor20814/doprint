@@ -13,7 +13,7 @@ const styles = {
     width: '1080px',
     height: '100px',
     flex: '1',
-    textColor: 'red', 
+    textColor: 'red',
   }
 };
 
