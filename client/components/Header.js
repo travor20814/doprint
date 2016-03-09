@@ -3,32 +3,37 @@ import Radium from 'radium';
 
 const styles = {
   container: {
-    width: '1080px',
-    height: '1080px',
-    display: 'flex',
+    width: '1000px',
+    height: '100px',
   },
-  titleString: {
-    width: '1080px',
-    flex: '1',
-    textAlign: 'center',
-  },
-  title: {
-    width: '1080px',
+  logo: {
+    width: '60px',
     height: '60px',
-    backgroundColor: 'Red',
-    flex: '1',
+    float: 'left',
+    marginTop: '32px',
+    marginLeft: '48px',
+    backgroundColor:'white',
   },
-
+  topicLinks: {
+    width: '80px',
+    height: '20px',
+    fontSize: '14px',
+    letterSpacing: '6px',
+    float: 'right',
+    marginRight: '60px',
+    marginTop: '32px',
+    textDecoration: 'none',
+    color: '#ffffff',
+  },
 };
 
 class Header extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <div>
-          <h3 style={styles.titleString}>test</h3>
-          <div style={styles.title}></div>
-        </div>
+        <img style={styles.logo} src={require('../images/brand.png')}/>
+        <a style={styles.topicLinks} href="">線上客服</a>
+        <a style={styles.topicLinks} href="">會員專區</a>
       </div>
     );
   }
