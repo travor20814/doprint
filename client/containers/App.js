@@ -5,6 +5,7 @@ import Radium from 'radium';
 
 import Header from '../components/Header.js';
 import Topicfooter from '../components/Topicfooter.js';
+import Article01 from '../components/Article01.js';
 
 const styles = {
   container: {
@@ -44,6 +45,11 @@ const styles = {
     marginLeft: '48px',
     backgroundColor: 'white',
   },
+
+  midArticle:{
+    width: '1000px',
+    height: '680px',
+  },
 };
 
 class App extends Component {
@@ -57,6 +63,9 @@ class App extends Component {
           馬上加入會員更享優惠。</a>
           <a style={styles.joinUs}>+加入我們<div style={styles.underLine}></div></a>
           <Topicfooter/>
+        </div>
+        <div style={styles.midArticle}>
+          <Article01/>
         </div>
       </div>
     );
