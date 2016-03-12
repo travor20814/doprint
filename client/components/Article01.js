@@ -9,10 +9,12 @@ const styles = {
     flexWrap:'wrap',
   },
   left:{
+
     height:'280px',
     flex:'1',
   },
   right:{
+  
     height: '280px',
     flex:'2',
   },

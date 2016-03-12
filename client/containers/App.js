@@ -9,6 +9,7 @@ import Article01 from '../components/Article01.js';
 import Article02 from '../components/Article02.js';
 import Article03 from '../components/Article03.js';
 import NewsPage from '../components/NewsPage.js';
+import PageFooter from '../components/PageFooter.js';
 
 const styles = {
   container: {
@@ -71,6 +72,7 @@ class App extends Component {
         <Article02/>
         <Article03/>
         <NewsPage/>
+        <PageFooter/>
       </div>
     );
   }
