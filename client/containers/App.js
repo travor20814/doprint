@@ -7,11 +7,13 @@ import Header from '../components/Header.js';
 import Topicfooter from '../components/Topicfooter.js';
 import Article01 from '../components/Article01.js';
 import Article02 from '../components/Article02.js';
+import Article03 from '../components/Article03.js';
+import NewsPage from '../components/NewsPage.js';
 
 const styles = {
   container: {
     width: '1000px',
-    height: '3000px',
+    height: '3500px',
     flexWrap: 'wrap',
   },
   slidePic: {
@@ -67,6 +69,8 @@ class App extends Component {
         </div>
         <Article01/>
         <Article02/>
+        <Article03/>
+        <NewsPage/>
       </div>
     );
   }
