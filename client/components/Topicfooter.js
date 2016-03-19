@@ -1,5 +1,6 @@
 import React, { Component, PropTypes as T } from 'react';
 import Radium from 'radium';
+import Buttons from './Buttons.js'
 
 const styles = {
   container: {
@@ -14,6 +15,7 @@ const styles = {
     marginRight: '24px',
     fontSize: '14px',
     letterSpacing: '8px',
+    textDecoration: 'none',
     color: '#ffffff',
   },
   navActive:{
@@ -31,12 +33,12 @@ class Topicfooter extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.navActive}></div>
-        <span style={styles.navs}>關於我們</span>
-        <span style={styles.navs}>最新消息</span>
-        <span style={styles.navs}>產品型錄</span>
-        <span style={styles.navs}>印刷門市</span>
-        <span style={styles.navs}>報價系統</span>
-        <span style={styles.navs}>會員專區</span>
+        <Buttons style={styles.navs} link="" text="關於我們"/>
+        <Buttons style={styles.navs} link="" text="最新消息"/>
+        <Buttons style={styles.navs} link="" text="產品型錄"/>
+        <Buttons style={styles.navs} link="" text="印刷門市"/>
+        <Buttons style={styles.navs} link="" text="報價系統"/>
+        <Buttons style={styles.navs} link="" text="會員專區"/>
       </div>
     );
   }

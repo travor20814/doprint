@@ -10,6 +10,7 @@ import Article02 from '../components/Article02.js';
 import Article03 from '../components/Article03.js';
 import NewsPage from '../components/NewsPage.js';
 import PageFooter from '../components/PageFooter.js';
+import Buttons from '../components/Buttons.js'
 
 const styles = {
   container: {
@@ -40,6 +41,7 @@ const styles = {
     fontSize: '14px',
     letterSpacing: '8px',
     marginLeft: '48px',
+    textDecoration:'none',
     color: '#ffffff',
   },
   underLine: {
@@ -65,7 +67,7 @@ class App extends Component {
           <a style={styles.topicSlogan}>都彼快印首創雲平台垂直整合，<br/>
           提供快速、經濟、又高質量的列印體驗，<br/>
           馬上加入會員更享優惠。</a>
-          <a style={styles.joinUs}>+加入我們<div style={styles.underLine}></div></a>
+          <a style={styles.joinUs} href="">+加入我們<div style={styles.underLine}></div></a>
           <Topicfooter/>
         </div>
         <Article01/>
@@ -74,6 +76,8 @@ class App extends Component {
         <NewsPage/>
         <PageFooter/>
       </div>
+
+
     );
   }
 }

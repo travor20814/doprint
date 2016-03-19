@@ -1,5 +1,6 @@
 import React, { Component, PropTypes as T } from 'react';
 import Radium from 'radium';
+import Buttons from './Buttons.js'
 
 const styles = {
   container: {
@@ -25,6 +26,7 @@ const styles = {
     textDecoration: 'none',
     color: '#ffffff',
   },
+
 };
 
 class Header extends Component {
@@ -32,8 +34,8 @@ class Header extends Component {
     return (
       <div style={styles.container}>
         <img style={styles.logo} src={require('../images/brand.png')}/>
-        <a style={styles.topicLinks} href="">線上客服</a>
-        <a style={styles.topicLinks} href="">會員專區</a>
+        <Buttons buttonStyle="styles.topButtons" link="" text="線上客服"/>
+        <Buttons buttonStyle="styles.topButtons" link="" text="會員專區"/>
       </div>
     );
   }
