@@ -84,38 +84,73 @@ class PageFooter extends Component {
           <div style={styles.list}>
             <div style={styles.topicLine}/>
             <SiteFootTopic topic={this.props.topicAbout}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link1_1}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link1_2}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link1_3}/>
+            {this.props.footerLinks_1.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='links'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+
           </div>
           <div style={styles.list}>
             <SiteFootTopic topic={this.props.topicNews}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link2_1}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link2_2}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link2_3}/>
+            {this.props.footerLinks_2.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='links'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+
           </div>
           <div style={styles.list}>
             <SiteFootTopic topic={this.props.topicProduct}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link3_1}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link3_2}/>
+            {this.props.footerLinks_3.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='links'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+
           </div>
           <div style={styles.list}>
             <SiteFootTopic topic={this.props.topicStores}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link4_1}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link4_2}/>
-            <SiteFootLinks linkStyle='links' text={this.props.link4_3}/>
-          </div>
+            {this.props.footerLinks_4.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='links'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+            </div>
           <div style={styles.longestLists}>
             <SiteFootTopic topic={this.props.topicPrices}/>
-            <SiteFootLinks linkStyle='longestLinks' text={this.props.link5_1}/>
-            <SiteFootLinks linkStyle='longestLinks' text={this.props.link5_2}/>
-          </div>
+            {this.props.footerLinks_5.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='longestLinks'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+            </div>
           <div style={styles.longLists}>
             <SiteFootTopic topic={this.props.topicMembers}/>
-            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_1}/>
-            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_2}/>
-            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_3}/>
-          </div>
+            {this.props.footerLinks_6.map((footLinks,idx) => {
+              return <SiteFootLinks
+              key = {idx}
+              linkStyle='longLinks'
+              link = {footLinks.path}
+              text={footLinks.name}/>
+            })
+            }
+            </div>
         </div>
         <div style={styles.copyrights}>
           <div style={styles.seperateLine}/>

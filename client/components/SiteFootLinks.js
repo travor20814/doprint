@@ -8,6 +8,8 @@ const styles = {
     marginTop:'12px',
     fontSize:'14px',
     letterSpacing:'8px',
+    textDecoration: 'none',
+    display: 'block',
     color:'#9b9b9b',
   },
   longLinks:{
@@ -15,6 +17,8 @@ const styles = {
     marginTop:'12px',
     fontSize:'14px',
     letterSpacing:'8px',
+    textDecoration: 'none',
+    display: 'block',
     color:'#9b9b9b',
   },
   longestLinks:{
@@ -22,15 +26,16 @@ const styles = {
     marginTop:'12px',
     fontSize:'14px',
     letterSpacing:'8px',
+    textDecoration: 'none',
+    display: 'block',
     color:'#9b9b9b',
   },
-
 };
 
 class SiteFootLinks extends Component {
   render() {
     return (
-      <div style={styles[this.props.linkStyle]}>{this.props.text}</div>
+      <a style={styles[this.props.linkStyle]} href={this.props.link}>{this.props.text}</a>
     );
   }
 }

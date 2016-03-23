@@ -15,8 +15,10 @@ class Header extends Component {
     return (
       <div style={styles.container}>
         <Logo logoStyle='topLogo'/>
-        <Buttons buttonStyle='topButtons' link={this.props.onlineLink} text={this.props.onlineServe}/>
-        <Buttons buttonStyle='topButtons' link={this.props.memberLink} text={this.props.members}/>
+        {this.props.headButtons.map((buttons,idx) =>{
+          return <Buttons key={idx} buttonStyle='topButtons' link={buttons.path} text={buttons.name}/>
+        })
+        }
       </div>
     );
   }
