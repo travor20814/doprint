@@ -1,6 +1,7 @@
 import React, { Component, PropTypes as T } from 'react';
 import Radium from 'radium';
-
+import SiteFootLinks from './SiteFootLinks.js';
+import SiteFootTopic from './SiteFootTopic.js';
 const styles = {
   container: {
     width:'1000px',
@@ -25,42 +26,15 @@ const styles = {
     height:'100px',
     marginRight:'32px',
   },
-  links:{
-    width:'100px',
-    marginTop:'12px',
-    fontSize:'14px',
-    letterSpacing:'8px',
-    color:'#9b9b9b',
-  },
   longLists:{
     width:'130px',
     height:'100px',
     marginRight:'32px',
   },
-  longLinks:{
-    width:'130px',
-    marginTop:'12px',
-    fontSize:'14px',
-    letterSpacing:'8px',
-    color:'#9b9b9b',
-  },
   longestLists:{
     width:'160px',
     height:'100px',
     marginRight:'32px',
-  },
-  longestLinks:{
-    width:'160px',
-    marginTop:'12px',
-    fontSize:'14px',
-    letterSpacing:'8px',
-    color:'#9b9b9b',
-  },
-  topic:{
-    fontSize:'14px',
-    letterSpacing:'8px',
-    color:'#000000',
-    marginBottom:'23px',
   },
   topicLine:{
     width:'80px',
@@ -109,38 +83,38 @@ class PageFooter extends Component {
         <div style={styles.listsBlock}>
           <div style={styles.list}>
             <div style={styles.topicLine}/>
-            <h3 style={styles.topic}>關於我們</h3>
-            <div style={styles.links}>關於都彼</div>
-            <div style={styles.links}>公司團隊</div>
-            <div style={styles.links}>各事業處</div>
+            <SiteFootTopic topic={this.props.topicAbout}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link1_1}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link1_2}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link1_3}/>
           </div>
           <div style={styles.list}>
-            <h3 style={styles.topic}>最新消息</h3>
-            <div style={styles.links}>公司新訊</div>
-            <div style={styles.links}>人員招募</div>
-            <div style={styles.links}>成功故事</div>
+            <SiteFootTopic topic={this.props.topicNews}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link2_1}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link2_2}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link2_3}/>
           </div>
           <div style={styles.list}>
-            <h3 style={styles.topic}>產品型錄</h3>
-            <div style={styles.links}>產品介紹</div>
-            <div style={styles.links}>下載中心</div>
+            <SiteFootTopic topic={this.props.topicProduct}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link3_1}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link3_2}/>
           </div>
           <div style={styles.list}>
-            <h3 style={styles.topic}>印刷門市</h3>
-            <div style={styles.links}>合作夥伴</div>
-            <div style={styles.links}>技術諮詢</div>
-            <div style={styles.links}>誠邀加盟</div>
+            <SiteFootTopic topic={this.props.topicStores}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link4_1}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link4_2}/>
+            <SiteFootLinks linkStyle='links' text={this.props.link4_3}/>
           </div>
           <div style={styles.longestLists}>
-            <h3 style={styles.topic}>報價系統</h3>
-            <div style={styles.longestLinks}>線上報價</div>
-            <div style={styles.longestLinks}>自動化名片打印</div>
+            <SiteFootTopic topic={this.props.topicPrices}/>
+            <SiteFootLinks linkStyle='longestLinks' text={this.props.link5_1}/>
+            <SiteFootLinks linkStyle='longestLinks' text={this.props.link5_2}/>
           </div>
           <div style={styles.longLists}>
-            <h3 style={styles.topic}>會員專區</h3>
-            <div style={styles.longLinks}>對帳單查詢</div>
-            <div style={styles.longLinks}>物流查詢</div>
-            <div style={styles.longLinks}>退貨單打印</div>
+            <SiteFootTopic topic={this.props.topicMembers}/>
+            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_1}/>
+            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_2}/>
+            <SiteFootLinks linkStyle='longLinks' text={this.props.link6_3}/>
           </div>
         </div>
         <div style={styles.copyrights}>

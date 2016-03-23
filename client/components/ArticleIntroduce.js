@@ -3,18 +3,16 @@ import Radium from 'radium';
 
 const styles = {
   container: {
-    height: '680px',
+    height: '280px',
     width: '1000px',
     display: 'flex',
-    flexWrap:'wrap',
+
   },
   left:{
-
     height:'280px',
     flex:'1',
   },
   right:{
-  
     height: '280px',
     flex:'2',
   },
@@ -39,16 +37,9 @@ const styles = {
     lineHeight: '24px',
     letterSpacing: '4px',
   },
-  picture:{
-    width: '1000px',
-    height: '400px',
-    backgroundImage: `url(${require('../images/landing_2.jpg')})`,
-    backgroundSize: '1000px 400px',
-    backgroundRepeat: 'no-repeat',
-  },
 };
 
-class Article01 extends Component {
+class ArticleIntroduce extends Component {
   render() {
     return (
       <div style={styles.container}>
@@ -65,10 +56,10 @@ class Article01 extends Component {
             服務，持續保持業界領先位置
           </div>
         </div>
-        <div style={styles.picture}></div>
+
       </div>
     );
   }
 }
 
-export default Radium(Article01);
+export default Radium(ArticleIntroduce);

@@ -1,16 +1,7 @@
 import React, { Component, PropTypes as T } from 'react';
 import Radium from 'radium';
-import NewsBlocks from './NewsBlocks.js';
+
 const styles = {
-  container: {
-    width: '1000px',
-    height:'400px',
-    marginTop:'16px',
-    paddingLeft:'12px',
-    paddingRight:'12px',
-    display:'flex',
-    flexWrap:'no-wrap',
-  },
   left:{
     height:'400px',
     flex:'1',
@@ -51,28 +42,15 @@ const styles = {
   },
 };
 
-class NewsPage extends Component {
+class NewsBlocks extends Component {
   render() {
     return (
-      <div style={styles.container}>
-        <NewsBlocks
-          blockStyle='left'
-          Title='leftTitle'
-          Content='leftContent'
-          topic={this.props.lefttopic}
-          date={this.props.date}
-          />
-        <NewsBlocks 
-          blockStyle='right'
-          Title='rightTitle'
-          Content='rightContent'
-          topic={this.props.righttopic}
-          date={this.props.date}
-          />
-
-      </div>
+        <div style={styles[this.props.blockStyle]}>
+          <h3 style={styles[this.props.Title]}>{this.props.topic}</h3>
+          <div style={styles[this.props.Content]}>{this.props.date}</div>
+        </div>
     );
   }
 }
 
-export default Radium(NewsPage);
+export default Radium(NewsBlocks);
