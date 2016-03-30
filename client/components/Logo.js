@@ -18,7 +18,6 @@ const styles = {
 
 class Logo extends Component {
   render() {
-    console.log(this.props);
     return (
       <div style={styles[this.props.logoStyle]}/>
     );

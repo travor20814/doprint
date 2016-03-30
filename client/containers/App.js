@@ -71,7 +71,6 @@ class App extends Component {
       TopicButtons,
     } = this.props;
 
-
     return (
       <div style={styles.container}>
         <div style={styles.slidePic}>
@@ -79,7 +78,7 @@ class App extends Component {
             headButtons = {HeaderButtons}
           />
           <p style={styles.topicSlogan}>
-            {Articles.slogan.content}
+            {Articles.slogan}
           </p>
           <a style={styles.joinUs} href={SomeNames.join.link}>
             {SomeNames.join.content}
@@ -89,35 +88,39 @@ class App extends Component {
               buttons={TopicButtons}
           />
         </div>
-        <ArticleIntroduce/>
+        <ArticleIntroduce
+          name = {Articles.introduce.name}
+          topic = {Articles.introduce.topic}
+          content = {Articles.introduce.content}
+        />
         <ArticleImages pic='introduce'/>
         <ArticleTech
           articles = {ArticleContents}
         />
         <ArticleImages pic='cooperate'/>
         <ArticleJoin
-          contents={Articles.joinContent.content}
-          more={Articles.joinMore.content}
-          latenew={Articles.lateNews.content}
-          othersnew={Articles.othersNews.content}
+          contents={Articles.joinContent}
+          more={Articles.joinMore}
+          latenew={Articles.lateNews}
+          othersnew={Articles.othersNews}
         />
         <NewsPage
           lefttopic={Articles.newsTopic.contentLeft}
           righttopic={Articles.newsTopic.contentRight}
-          date={Articles.newsDate.content}
+          date={Articles.newsDate}
         />
         <PageFooter
-          topicAbout={SomeNames.about.content}
+          topicAbout={FooterButtons.aboutTopic}
           footerLinks_1 = {FooterButtons.aboutUs}
-          topicNews={SomeNames.news.content}
+          topicNews={FooterButtons.newsTopic}
           footerLinks_2 = {FooterButtons.latestNews}
-          topicProduct={SomeNames.menus.content}
+          topicProduct={FooterButtons.productTopic}
           footerLinks_3 = {FooterButtons.products}
-          topicStores={SomeNames.stores.content}
+          topicStores={FooterButtons.storeTopic}
           footerLinks_4 = {FooterButtons.stores}
-          topicPrices={SomeNames.prices.content}
+          topicPrices={FooterButtons.priceTopic}
           footerLinks_5 = {FooterButtons.prices}
-          topicMembers={SomeNames.members.content}
+          topicMembers={FooterButtons.memberTopic}
           footerLinks_6 = {FooterButtons.members}
         />
       </div>

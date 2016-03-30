@@ -1,4 +1,10 @@
 var mocks = {
+  aboutTopic: '關於我們',
+  newsTopic: '最新消息',
+  productTopic: '產品型錄',
+  storeTopic: '打印門市',
+  priceTopic: '報價系統',
+  memberTopic: '會員專區',
   aboutUs : [{
     path: '/aboutDubi',
     name: '關於都彼',

@@ -20,15 +20,6 @@ const styles = {
 };
 class Topicfooter extends Component {
   render() {
-    //var names = this.props.buttonNames.buttonStrings;
-
-    // <Buttons buttonStyle='footButtons' link={this.props.aboutLink} text={this.props.about}/>
-    // <Buttons buttonStyle='footButtons' link={this.props.newsLink} text={this.props.news}/>
-    // <Buttons buttonStyle='footButtons' link={this.props.menusLink} text={this.props.menus}/>
-    // <Buttons buttonStyle='footButtons' link={this.props.storesLink} text={this.props.stores}/>
-    // <Buttons buttonStyle='footButtons' link={this.props.pricesLink} text={this.props.prices}/>
-    // <Buttons buttonStyle='footButtons' link={this.props.membersLink} text={this.props.members}/>
-
     return (
       <div style={styles.container}>
         <div style={styles.navActive}></div>
