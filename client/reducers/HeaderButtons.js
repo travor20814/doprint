@@ -1,12 +1,11 @@
+import {
+  HEADER_BUTTONS_FETCHED
+} from '../actions/HeaderButtons.js';
 
-export default function (state =[{
-  path: '/member',
-  name: '會員專區',
-}, {
-  path: '/onlineServe',
-  name: '線上客服',
-}],action){
+export default function (state = [], action){
   switch (action.type) {
+    case HEADER_BUTTONS_FETCHED:
+      return action.HeaderButtons;
     default:
       return state ;
   }

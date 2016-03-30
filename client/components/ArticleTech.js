@@ -28,21 +28,6 @@ const styles = {
 
 class ArticleTech extends Component {
   render() {
-    /*<ArtiTechContent
-    Slogan={this.props.leftSlogans}
-    Topic={this.props.leftTopics}
-    Content={this.props.leftContents}
-    />
-    <ArtiTechContent
-    Slogan={this.props.midSlogans}
-    Topic={this.props.midTopics}
-    Content={this.props.midContents}
-    />
-    <ArtiTechContent
-    Slogan={this.props.rightSlogans}
-    Topic={this.props.rightTopics}
-    Content={this.props.rightContents}
-    />*/
     return (
       <div style={styles.container}>
         <div style={styles.topic}>技術創新電腦科技整合印務流程</div>

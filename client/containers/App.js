@@ -13,6 +13,13 @@ import NewsPage from '../components/NewsPage.js';
 import PageFooter from '../components/PageFooter.js';
 import Buttons from '../components/Buttons.js';
 import Logo from '../components/Logo.js';
+import * as TopicButtonsActions from '../actions/TopicButtons.js';
+import * as ArticleContentsActions from '../actions/ArticleContents.js';
+import * as ArticleActions from '../actions/Articles.js';
+import * as FooterButtonsActions from '../actions/FooterButtons.js';
+import * as HeaderButtonsActions from '../actions/HeaderButtons.js';
+import * as SomeNamesActions from '../actions/SomeNames.js';
+
 
 const styles = {
   container: {
@@ -61,6 +68,24 @@ const styles = {
 };
 
 class App extends Component {
+  componentDidMount() {
+    const {
+      fetchTopicButtons,
+      fetchArticleContents,
+      fetchArticles,
+      fetchFooterButtons,
+      fetchHeaderButtons,
+      fetchSomeNames,
+    } = this.props;
+
+    fetchTopicButtons();
+    fetchArticleContents();
+    fetchArticles();
+    fetchFooterButtons();
+    fetchHeaderButtons();
+    fetchSomeNames();
+  }
+
   render() {
     const {
       Articles,
@@ -136,4 +161,9 @@ export default connect(
     SomeNames: state.SomeNames,
     TopicButtons: state.TopicButtons,
   }),
+
+  dispatch => bindActionCreators(Object.assign({},
+    TopicButtonsActions, ArticleContentsActions, ArticleActions, FooterButtonsActions,
+  HeaderButtonsActions, SomeNamesActions), dispatch)
+
 )(Radium(App));

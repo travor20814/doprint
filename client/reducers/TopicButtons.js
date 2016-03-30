@@ -1,25 +1,13 @@
+import {
+  TOPIC_BUTTONS_FETCHED,
+} from '../actions/TopicButtons.js';
 
-export default function (state =[{
-  path: '/about',
-  name: '關於我們',
-}, {
-  path: '/news',
-  name: '最新消息',
-}, {
-  path: '/products',
-  name: '產品型錄',
-},{
-  path: '/stores',
-  name: '印刷門市',
-},{
-  path: '/prices',
-  name: '報價系統',
-},{
-  path: '/members',
-  name: '會員專區',
-}],action){
+export default function (state = [], action){
   switch (action.type) {
+    case TOPIC_BUTTONS_FETCHED:
+      return action.buttons;
+
     default:
-      return state ;
+      return state;
   }
 };
